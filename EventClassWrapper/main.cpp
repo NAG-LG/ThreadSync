@@ -1,5 +1,5 @@
 #include <iostream>
-#include "../EventClass.h"
+#include "EventClass.h"
 
 using namespace std;
 
