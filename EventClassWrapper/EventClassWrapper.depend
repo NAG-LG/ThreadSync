@@ -1,0 +1,16 @@
+# depslib dependency file v1.0
+1535050414 source:/home/hacker/work/GE-Learn/ConditionalVariable/EventClass.cpp
+	<iostream>
+	"EventClass.h"
+
+1535050554 /home/hacker/work/GE-Learn/ConditionalVariable/EventClass.h
+	<iostream>
+	<pthread.h>
+	<map>
+	<vector>
+	<unistd.h>
+
+1535050334 source:/home/hacker/work/GE-Learn/ConditionalVariable/EventClassWrapper/main.cpp
+	<iostream>
+	"../EventClass.h"
+
