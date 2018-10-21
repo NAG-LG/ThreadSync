@@ -1,0 +1,1 @@
+/usr/bin/c++       CMakeFiles/DateUnitTest.dir/DateUnitTest.cpp.o  -o DateUnitTest -rdynamic -lgtest -lgtest_main libUrs.a 
