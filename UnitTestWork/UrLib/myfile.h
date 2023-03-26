@@ -1,1 +1,1 @@
-int DateMultiply(int d, int m , int y);
+//int DateMultiply(int d, int m , int y);
