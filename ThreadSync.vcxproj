@@ -101,12 +101,14 @@
     <ClCompile Include="Application.cpp" />
     <ClCompile Include="eventclasswrapper\EventClass.cpp" />
     <ClCompile Include="eventclasswrapper\main.cpp" />
+    <ClCompile Include="ThreadPool.cpp" />
     <ClCompile Include="unittestwork\DateUnitTest.cpp" />
     <ClCompile Include="unittestwork\main.cpp" />
     <ClCompile Include="unittestwork\urlib\myfile.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="eventclasswrapper\EventClass.h" />
+    <ClInclude Include="ThreadPool.h" />
     <ClInclude Include="unittestwork\urlib\myfile.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

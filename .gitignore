@@ -1,3 +1,4 @@
 #ignores the binaries created on successfull build
 X64/
 /*.user
+.vs
