@@ -10,22 +10,24 @@ std::mutex m2;
 
 void func(void *data) {
     std::string task_name((char*)(data));
+    std::lock_guard<std::mutex> lock_cout(m1);
     std::cout << task_name << std::endl;
 }
 
 int main()
 {
     ThreadPool my_pool(5);
-    for (int i = 1; i <= 10; i++) {
+    for (int i = 1; i <= 100; i++) {
         Task t1;
         t1.call_back = (void* (*)(void*))(func);
         t1.task_name = "task number " + std::to_string(i);
         my_pool.Add_Task(t1);
     }
     my_pool.Start();
-    std::this_thread::sleep_for(std::chrono::milliseconds(100));
+    std::this_thread::sleep_for(std::chrono::milliseconds(10000));
     my_pool.End();
     std::this_thread::sleep_for(std::chrono::milliseconds(10000));
+    getchar();
     return 0;
 }
 /* {    auto f1 = []() {

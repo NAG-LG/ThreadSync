@@ -14,7 +14,7 @@ ThreadPool::~ThreadPool()
 
 PoolStatus ThreadPool::Start(){
 
-	for (int i = 1; i < thread_Count_; i++) {
+	for (int i = 1; i <= thread_Count_; i++) {
 		threads_Vec_.push_back(std::thread(&ThreadPool::Task_Executor, this));
 	}
 	return current_Pool_Status_;

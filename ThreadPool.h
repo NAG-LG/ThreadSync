@@ -1,4 +1,6 @@
-#pragma once
+#ifndef THREAD_POOL_H
+#define THREAD_POOL_H
+
 #include <thread>
 #include <iostream>
 #include <string>
@@ -37,3 +39,5 @@ private:
 	std::queue<Task> task_Q_;
 	std::mutex task_locker;
 };
+
+#endif // !THREAD_POOL_H
