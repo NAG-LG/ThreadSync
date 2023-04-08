@@ -23,6 +23,7 @@ struct Task {
 class ThreadPool {
 public:
 	ThreadPool(int threadCount);
+	~ThreadPool();
 	PoolStatus Start();
 	PoolStatus End();
 	bool Add_Tasks(std::queue<Task> );

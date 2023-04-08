@@ -23,7 +23,7 @@ int main()
         my_pool.Add_Task(t1);
     }
     my_pool.Start();
-    std::this_thread::sleep_for(std::chrono::milliseconds(10000));
+    std::this_thread::sleep_for(std::chrono::milliseconds(100));
     my_pool.End();
     std::this_thread::sleep_for(std::chrono::milliseconds(10000));
     return 0;

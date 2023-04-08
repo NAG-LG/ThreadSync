@@ -5,6 +5,13 @@ ThreadPool::ThreadPool(int threadCount):thread_Count_(threadCount),
 										current_Pool_Status_(IDLE){
 }
 
+ThreadPool::~ThreadPool()
+{
+	for (auto& thread_handle : threads_Vec_) {
+		thread_handle.join();
+	}
+}
+
 PoolStatus ThreadPool::Start(){
 
 	for (int i = 1; i < thread_Count_; i++) {
@@ -16,7 +23,7 @@ PoolStatus ThreadPool::Start(){
 PoolStatus ThreadPool::End(){
 	is_not_exit_threads = false;
 	// TODO: send events for thread which are waiting for new task. Simply sleeping for temp sollution
-	std::this_thread::sleep_for(std::chrono::milliseconds(thread_Count_*10+10));
+	//std::this_thread::sleep_for(std::chrono::milliseconds(thread_Count_*10+10));
 	return current_Pool_Status_;
 }
 
